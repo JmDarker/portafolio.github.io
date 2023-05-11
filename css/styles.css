@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+/* Diseño De Cuerpo. */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Diseño De Encabezado. */
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.pcclean.io/wp-content/uploads/2020/4/ABnaii.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Barra De Navegación. */
+
+#bar {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+}
+
+#bar ul {
+    display: flex;
+    align-items: center;
+}
+
+#bar li {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+}
+
+#bar a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#bar a:hover {
+    color: red;
+    transition: all 0.8s ease;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+.logo img {
+    margin: 0;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    -webkit-animation: logo 3s infinite ease;
+}
+
+/* Perfil De Presentación. */
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contenedor-perfil {
+    border-radius: 5rem;
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 0 10px rgb(253, 253, 253) inset;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.contenedor-perfil h1 {
+    font-family: 'Roboto';
+    background: linear-gradient(#ff0000, #960808, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+}
+
+.contenedor-perfil p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+}
+
+.img-perfil img {
+    border: double red;
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+/* Sección información. */
+
+#info {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    text-align: le;
+}
+
+.diseño {
+    width: 600px;
+    padding: 10px;
+}
+
+.diseño h2 {
+    color: red;
+    font-size: 2.1em;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: red 1px solid;
+}
+
+.info2 ul {
+    display: inline-block;
+    justify-content: center;
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+}
+
+.diseño p,
+.diseño li {
+    color: antiquewhite;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.diseño strong {
+    display: inline-block;
+    width: 90px;
+    padding: 5px 0;
+
+}
+
+/* Contenedor de educación y trabajo. */
+
+#contenedor-ed-ex {
+    background-color: rgb(27, 27, 27);
+    margin: 0;
+    padding: 30px;
+}
+
+#contenedor-ed-ex > h2 {
+    color: red;
+    font-size: 2.1em;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid red;
+    text-align: center;
+    margin: 0;
+}
+
+.ed-ex {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    width: 100%;
+}
+
+.ed-ex ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
+
+.ed-ex li {
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    padding: 25px;
+}
+
+.ed-ex li h3,
+.ed-ex li h4 {
+    margin: 0px;
+}
+
+.ed-ex ul > h2 {
+    text-shadow: 0 0 20px red;
+    text-align: center;
+}
+
+/* Estilos del footer. */
+
+footer {
+    background-color: #000000;
+    color: antiquewhite;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px
+}
+
+/* pantalla adaptada dispositivos móviles. */
+
+@media (max-width: 720px) {
+
+    /* Barra De Navegación. */
+
+    #bar li {
+        padding: 5px 10px;
+    }
+
+    .menu {
+        visibility: visible;
+        margin-top: 20px;
+        height: 30px;
+    }
+
+    .ul {
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgb(255, 255, 255, 1);
+        justify-content: center;
+        margin-top: 50px;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.7s ease;
+    }
+
+    .ul.visible {
+        height: 140px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Sección información. */
+
+    #info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diseño {
+        width: 380px;
+    }
+
+    /* Contenedor de educación y trabajo. */
+
+    .ed-ex {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center
+    }
+
+    /* Estilos del footer. */
+
+    footer {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .contenedor-perfil {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .img-perfil img {
+        width: 40vw;
+        height: 20vh;
+    }
+}
+
+
+@keyframes logo {
+    0% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
