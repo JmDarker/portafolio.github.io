@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 /* Diseño De Cuerpo. */
@@ -5,6 +12,7 @@
 body {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -24,13 +32,21 @@ header {
 #bar {
     margin: 0;
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     opacity: 1;
 }
 
 #bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -49,6 +65,8 @@ header {
 
 #bar a:hover {
     color: red;
+    -webkit-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
     transition: all 0.8s ease;
 }
 
@@ -68,9 +86,18 @@ header {
 /* Perfil De Presentación. */
 
 .perfil {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 80vh;
 }
@@ -78,6 +105,7 @@ header {
 .contenedor-perfil {
     border-radius: 5rem;
     background-color: rgb(27, 27, 27);
+    -webkit-box-shadow: 0 0 10px rgb(253, 253, 253) inset;
     box-shadow: 0 0 10px rgb(253, 253, 253) inset;
     padding: 30px;
     width: 300px;
@@ -87,6 +115,8 @@ header {
 
 .contenedor-perfil h1 {
     font-family: 'Roboto';
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), color-stop(#960808), to(#ff0000));
+    background: -o-linear-gradient(#ff0000, #960808, #ff0000);
     background: linear-gradient(#ff0000, #960808, #ff0000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -109,7 +139,11 @@ header {
 /* Sección información. */
 
 #info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-color: rgb(27, 27, 27);
     text-align: le;
@@ -129,6 +163,8 @@ header {
 
 .info2 ul {
     display: inline-block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     list-style-type: none;
     text-align: left;
@@ -167,7 +203,11 @@ header {
 }
 
 .ed-ex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: antiquewhite;
     width: 100%;
@@ -223,16 +263,25 @@ footer {
 
     .ul {
         position: absolute;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         right: 0;
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         border-radius: 10px;
+        -webkit-box-shadow: 0 0 8px rgb(255, 255, 255, 1);
         box-shadow: 0 0 8px rgb(255, 255, 255, 1);
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-top: 50px;
         padding: 0;
         height: 0;
         overflow: hidden;
+        -webkit-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
         transition: all 0.7s ease;
     }
 
@@ -248,7 +297,12 @@ footer {
     /* Sección información. */
 
     #info {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -259,8 +313,15 @@ footer {
     /* Contenedor de educación y trabajo. */
 
     .ed-ex {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center
     }
 
@@ -286,12 +347,27 @@ footer {
 }
 
 
-@keyframes logo {
+@-webkit-keyframes logo {
     0% {
+        -webkit-transform: rotate(1deg);
         transform: rotate(1deg);
     }
 
     100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes logo {
+    0% {
+        -webkit-transform: rotate(1deg);
+        transform: rotate(1deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
